@@ -123,6 +123,33 @@ TeleReaderProj/fast:
 	$(MAKE) -f CMakeFiles/TeleReaderProj.dir/build.make CMakeFiles/TeleReaderProj.dir/build
 .PHONY : TeleReaderProj/fast
 
+TelemKalmanVoltage.o: TelemKalmanVoltage.cpp.o
+
+.PHONY : TelemKalmanVoltage.o
+
+# target to build an object file
+TelemKalmanVoltage.cpp.o:
+	$(MAKE) -f CMakeFiles/TeleReaderProj.dir/build.make CMakeFiles/TeleReaderProj.dir/TelemKalmanVoltage.cpp.o
+.PHONY : TelemKalmanVoltage.cpp.o
+
+TelemKalmanVoltage.i: TelemKalmanVoltage.cpp.i
+
+.PHONY : TelemKalmanVoltage.i
+
+# target to preprocess a source file
+TelemKalmanVoltage.cpp.i:
+	$(MAKE) -f CMakeFiles/TeleReaderProj.dir/build.make CMakeFiles/TeleReaderProj.dir/TelemKalmanVoltage.cpp.i
+.PHONY : TelemKalmanVoltage.cpp.i
+
+TelemKalmanVoltage.s: TelemKalmanVoltage.cpp.s
+
+.PHONY : TelemKalmanVoltage.s
+
+# target to generate assembly for a file
+TelemKalmanVoltage.cpp.s:
+	$(MAKE) -f CMakeFiles/TeleReaderProj.dir/build.make CMakeFiles/TeleReaderProj.dir/TelemKalmanVoltage.cpp.s
+.PHONY : TelemKalmanVoltage.cpp.s
+
 TelemParser.o: TelemParser.cpp.o
 
 .PHONY : TelemParser.o
@@ -240,6 +267,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... TeleReaderProj"
 	@echo "... edit_cache"
+	@echo "... TelemKalmanVoltage.o"
+	@echo "... TelemKalmanVoltage.i"
+	@echo "... TelemKalmanVoltage.s"
 	@echo "... TelemParser.o"
 	@echo "... TelemParser.i"
 	@echo "... TelemParser.s"

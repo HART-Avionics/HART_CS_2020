@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/TeleReaderProj.dir/TelemKalmanVoltage.cpp.o"
   "CMakeFiles/TeleReaderProj.dir/TelemParser.cpp.o"
   "CMakeFiles/TeleReaderProj.dir/TelemSensorData.cpp.o"
   "CMakeFiles/TeleReaderProj.dir/TelemString.cpp.o"
