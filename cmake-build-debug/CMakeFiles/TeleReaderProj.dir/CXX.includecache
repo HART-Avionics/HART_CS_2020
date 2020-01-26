@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/lunng/Documents/Homework/461CS/TeleReaderProj/TelemSensorData.h
+string
+-
+TelemString.h
+/home/lunng/Documents/Homework/461CS/TeleReaderProj/TelemString.h
+
+/home/lunng/Documents/Homework/461CS/TeleReaderProj/TelemString.h
+string
+-
+
+/home/lunng/Documents/Homework/461CS/TeleReaderProj/main.cpp
+iostream
+-
+fstream
+-
+sstream
+-
+TelemString.h
+/home/lunng/Documents/Homework/461CS/TeleReaderProj/TelemString.h
+TelemSensorData.h
+/home/lunng/Documents/Homework/461CS/TeleReaderProj/TelemSensorData.h
+
