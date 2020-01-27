@@ -70,6 +70,7 @@ void TelemSensorData::update_values() {
 }
 
 void TelemSensorData::dump_string_data() {
+    dump_string_info();
     std::cout << "\n====== Sensor Data ======" << std::endl;
     std::cout <<
               "\t" << "orient: " << (unsigned) get_orient() << std::endl <<

@@ -6,6 +6,7 @@
 #include <iostream>
 #include <utility>
 #include <fstream>
+#include <chrono>
 #include "TelemParser.h"
 
 
@@ -69,7 +70,7 @@ void TelemParser::do_work() {
                 fin.seekg(this->reader_location);
 
                 // Fill in the updated data members
-                while(!fin.eof()){
+                while(!fin.eof() && fin.tellg() != -1){
                     std::string data_line;
                     getline(fin, data_line);    // Read the next unread line
 
@@ -85,6 +86,7 @@ void TelemParser::do_work() {
             }
         }
         this->iostream_mutex.unlock();
+        std::this_thread::sleep_for (std::chrono::milliseconds(100));
     }
 }
 
@@ -150,6 +152,7 @@ void TelemParser::initialize() {
 
 void TelemParser::dump_data() {
     this->iostream_mutex.lock();
+
     if(this->TGPS != nullptr){
         this->TGPS->dump_string_data();
     }

@@ -80,10 +80,15 @@ int main() {
 //         "test GPS latitude:" << test_gps.get_latitude() << "\n" <<
 //         "test GPS ground speed:" << test_gps.get_ground_speed() << "\n" <<
 //         "test GPS course: " << (unsigned int) test_gps.get_course() << "\n";
-    string filename = "/home/lunng/TeleMetrum/2020-01-13-serial-3083-flight-0024-via-2881.telem";
+    string filename = "/home/lunng/TeleMetrum/2020-01-27-serial-3083-flight-0024-via-2881.telem";
     TelemParser parser(filename);
     parser.Start();
-    parser.dump_data();
+
+    for(int i = 0; i < 20; i++){
+        parser.dump_data();
+        std::this_thread::sleep_for(std::chrono::milliseconds(1000));
+    }
+
 
 
 

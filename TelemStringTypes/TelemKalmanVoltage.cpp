@@ -64,6 +64,7 @@ void TelemKalmanVoltage::update_values() {
 }
 
 void TelemKalmanVoltage::dump_string_data() {
+    dump_string_info();
     std::cout << "\n====== Kalman + Voltage Data ======" << std::endl;
     std::cout <<
               "\t" << "state: " << (unsigned) get_state() << std::endl <<

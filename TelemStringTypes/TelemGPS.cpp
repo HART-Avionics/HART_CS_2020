@@ -101,6 +101,7 @@ void TelemGPS::update_values() {
 }
 
 void TelemGPS::dump_string_data() {
+    dump_string_info();
     std::cout << "\n====== GPS Data ======" << std::endl;
     std::cout <<
               "\t" << "flags: " << (unsigned) get_flags() << std::endl <<
