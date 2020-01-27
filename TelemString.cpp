@@ -69,7 +69,7 @@ int TelemString::get_mode(std::string line_in) {
     line_in.erase(0, 6);
     std::string val = line_in.substr(MODE_OFFSET * 2, 2 );
 
-    return std::stoi(val);
+    return std::stoi(val, nullptr, 16);
 }
 
 unsigned int TelemString::get_mode() {
