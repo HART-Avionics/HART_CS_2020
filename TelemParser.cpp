@@ -25,7 +25,7 @@ bool TelemParser::telem_string_valid(std::string test_string) {
         return false;
     }
 
-    std::cout << "The lqi is valid!" << std::endl;
+    ; // Placeholder in case we need to do any more work
 
     return true;
 }
@@ -42,6 +42,7 @@ TelemParser::TelemParser(std::string filename) : file_reader() {
     this->TSD = nullptr;
     this->running = false;
     this->data_valid = false;
+    initialize();
 }
 
 TelemParser::~TelemParser(){
@@ -97,4 +98,55 @@ void TelemParser::do_work() {
             fin.close();
         }
     }
+}
+
+void TelemParser::initialize() {
+    std::ifstream fin;
+    std::string line_in;
+
+    fin.open(this->input_file);
+    while(!fin.eof()){
+        getline(fin,line_in);               // Read the current line
+
+        if(telem_string_valid(line_in)){
+            int mode = TelemString::get_mode(line_in);
+
+            // Update the stored data
+            switch(mode) {
+                case MODE_GPS:
+                    if (this->TGPS == nullptr) {
+                        this->TGPS = new TelemGPS(line_in);
+                    } else {
+                        this->TGPS->update_string(line_in);
+                        this->TGPS->update_values();
+                    }
+                    break;
+
+                case MODE_KV:
+                    if (this->TKV == nullptr) {
+                        this->TKV = new TelemKalmanVoltage(line_in);
+                    } else {
+                        this->TKV->update_string(line_in);
+                        this->TKV->update_values();
+                    }
+                    break;
+
+                case MODE_SD:
+                    if (this->TSD == nullptr){
+                        this->TSD = new TelemSensorData(line_in);
+                    } else {
+                        this->TSD->update_string(line_in);
+                        this->TSD->update_values();
+                    }
+                    break;
+
+                default:
+                    std::cout << line_in << " has unsupported mode: " << mode << std::endl;
+            }
+        }
+    }
+
+    this->reader_location = fin.tellg();
+    fin.close();
+
 }

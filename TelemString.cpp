@@ -4,6 +4,7 @@
 
 #include <string>
 #include <cassert>
+#include <utility>
 #include "TelemString.h"
 
 #define SN_OFFSET 1
@@ -19,13 +20,7 @@ std::string TelemString::get_bytes(int first_byte, int last_byte){
 }
 
 TelemString::TelemString(std::string line_in) {
-    std::string s("TELEM ");
-    assert(line_in.rfind(s, 0) == 0);
-    this->_telem_data = line_in.erase(0, s.length());
-
-    this->serial = get_uint16_val(SN_OFFSET);
-    this->tick = get_uint16_val(TICK_OFFSET);
-    this->mode = get_uint8_val(MODE_OFFSET);
+    update_string(std::move(line_in));
 }
 
 std::string TelemString::get_ordered_bytes(int first, int last) {
@@ -86,5 +81,15 @@ unsigned int TelemString::get_tick() {
 
 unsigned int TelemString::get_serial() {
     return this->serial;
+}
+
+void TelemString::update_string(std::string new_data) {
+    std::string s("TELEM ");
+    assert(new_data.rfind(s, 0) == 0);
+    this->_telem_data = new_data.erase(0, s.length());
+
+    this->serial = get_uint16_val(SN_OFFSET);
+    this->tick = get_uint16_val(TICK_OFFSET);
+    this->mode = get_uint8_val(MODE_OFFSET);
 }
 

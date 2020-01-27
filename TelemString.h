@@ -10,12 +10,14 @@
 class TelemString {
 private:
     std::string _telem_data;
-    unsigned int serial;
-    unsigned int tick;
-    unsigned int mode;
+    unsigned int serial{};
+    unsigned int tick{};
+    unsigned int mode{};
 
 public:
     explicit TelemString(std::string);
+    TelemString() = delete;
+
     std::string get_bytes(int, int);
     std::string get_ordered_bytes(int, int);
 
@@ -28,6 +30,10 @@ public:
 
     unsigned int get_mode();
     static int get_mode(std::string);
+
+    void update_string(std::string);
+    virtual void update_values() = 0;
+
     unsigned int get_tick();
     unsigned int get_serial();
 };

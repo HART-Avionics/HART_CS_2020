@@ -14,25 +14,31 @@
 
 class TelemParser {
 private:
+    // Variables for reading the data file
     std::string lastString;
     std::string input_file;
+    std::streampos reader_location;
 
-    std::thread file_reader;
-
+    // Data storage variables
     TelemGPS *TGPS;
     TelemSensorData *TSD;
     TelemKalmanVoltage *TKV;
 
+    // Variables for threading
+    std::thread file_reader;
     bool running;
     bool data_valid;
 
 public:
     explicit TelemParser(std::string);
+
     ~TelemParser();
 
+    TelemParser() = delete;
     TelemParser(const TelemParser&) = delete;
     TelemParser& operator=(const TelemParser&) = delete;
 
+    void initialize();
     void do_work();
 
     static bool telem_string_valid(std::string);

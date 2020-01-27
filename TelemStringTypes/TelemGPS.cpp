@@ -6,26 +6,7 @@
 #include "TelemGPS.h"
 
 TelemGPS::TelemGPS(std::string input_val) : TelemString(std::move(input_val)){
-    assert(this->get_mode() == 0x05);
-
-    this->flags = get_uint8_val(6);
-    this->altitude = get_int16_val(7);
-    this->latitude = get_int32_val(9);
-    this->longitude = get_int32_val(13);
-    this->year = get_uint8_val(17);
-    this->month = get_uint8_val(18);
-    this->day = get_uint8_val(19);
-    this->hour = get_uint8_val(20);
-    this->minute = get_uint8_val(21);
-    this->second = get_uint8_val(22);
-    this->pdop = get_uint8_val(23);
-    this->hdop = get_uint8_val(24);
-    this->vdop = get_uint8_val(25);
-    this->mode = get_uint8_val(26);
-    this->ground_speed = get_uint16_val(27);
-    this->climb_rate = get_int16_val(29);
-    this->course = get_uint8_val(31);
-
+    update_values();
 }
 
 uint8_t TelemGPS::get_flags(){
@@ -94,4 +75,26 @@ int16_t TelemGPS::get_climb_rate(){
 
 uint8_t TelemGPS::get_course(){
     return this->course;
+}
+
+void TelemGPS::update_values() {
+    assert(this->get_mode() == MODE_GPS);
+
+    this->flags = get_uint8_val(6);
+    this->altitude = get_int16_val(7);
+    this->latitude = get_int32_val(9);
+    this->longitude = get_int32_val(13);
+    this->year = get_uint8_val(17);
+    this->month = get_uint8_val(18);
+    this->day = get_uint8_val(19);
+    this->hour = get_uint8_val(20);
+    this->minute = get_uint8_val(21);
+    this->second = get_uint8_val(22);
+    this->pdop = get_uint8_val(23);
+    this->hdop = get_uint8_val(24);
+    this->vdop = get_uint8_val(25);
+    this->mode = get_uint8_val(26);
+    this->ground_speed = get_uint16_val(27);
+    this->climb_rate = get_int16_val(29);
+    this->course = get_uint8_val(31);
 }
