@@ -6,7 +6,7 @@
 #define TELEREADERPROJ_TELEMSENSORDATA_H
 
 #include <string>
-#include "TelemString.h"
+#include "../TelemString.h"
 
 class TelemSensorData : public TelemString {
 private:

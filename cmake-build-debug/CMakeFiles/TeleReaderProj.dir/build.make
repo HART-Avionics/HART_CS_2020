@@ -96,39 +96,53 @@ CMakeFiles/TeleReaderProj.dir/TelemString.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TeleReaderProj.dir/TelemString.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lunng/Documents/Homework/461CS/TeleReaderProj/TelemString.cpp -o CMakeFiles/TeleReaderProj.dir/TelemString.cpp.s
 
-CMakeFiles/TeleReaderProj.dir/TelemSensorData.cpp.o: CMakeFiles/TeleReaderProj.dir/flags.make
-CMakeFiles/TeleReaderProj.dir/TelemSensorData.cpp.o: ../TelemSensorData.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lunng/Documents/Homework/461CS/TeleReaderProj/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/TeleReaderProj.dir/TelemSensorData.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TeleReaderProj.dir/TelemSensorData.cpp.o -c /home/lunng/Documents/Homework/461CS/TeleReaderProj/TelemSensorData.cpp
+CMakeFiles/TeleReaderProj.dir/TelemStringTypes/TelemSensorData.cpp.o: CMakeFiles/TeleReaderProj.dir/flags.make
+CMakeFiles/TeleReaderProj.dir/TelemStringTypes/TelemSensorData.cpp.o: ../TelemStringTypes/TelemSensorData.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lunng/Documents/Homework/461CS/TeleReaderProj/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/TeleReaderProj.dir/TelemStringTypes/TelemSensorData.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TeleReaderProj.dir/TelemStringTypes/TelemSensorData.cpp.o -c /home/lunng/Documents/Homework/461CS/TeleReaderProj/TelemStringTypes/TelemSensorData.cpp
 
-CMakeFiles/TeleReaderProj.dir/TelemSensorData.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TeleReaderProj.dir/TelemSensorData.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lunng/Documents/Homework/461CS/TeleReaderProj/TelemSensorData.cpp > CMakeFiles/TeleReaderProj.dir/TelemSensorData.cpp.i
+CMakeFiles/TeleReaderProj.dir/TelemStringTypes/TelemSensorData.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TeleReaderProj.dir/TelemStringTypes/TelemSensorData.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lunng/Documents/Homework/461CS/TeleReaderProj/TelemStringTypes/TelemSensorData.cpp > CMakeFiles/TeleReaderProj.dir/TelemStringTypes/TelemSensorData.cpp.i
 
-CMakeFiles/TeleReaderProj.dir/TelemSensorData.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TeleReaderProj.dir/TelemSensorData.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lunng/Documents/Homework/461CS/TeleReaderProj/TelemSensorData.cpp -o CMakeFiles/TeleReaderProj.dir/TelemSensorData.cpp.s
+CMakeFiles/TeleReaderProj.dir/TelemStringTypes/TelemSensorData.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TeleReaderProj.dir/TelemStringTypes/TelemSensorData.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lunng/Documents/Homework/461CS/TeleReaderProj/TelemStringTypes/TelemSensorData.cpp -o CMakeFiles/TeleReaderProj.dir/TelemStringTypes/TelemSensorData.cpp.s
 
-CMakeFiles/TeleReaderProj.dir/TelemKalmanVoltage.cpp.o: CMakeFiles/TeleReaderProj.dir/flags.make
-CMakeFiles/TeleReaderProj.dir/TelemKalmanVoltage.cpp.o: ../TelemKalmanVoltage.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lunng/Documents/Homework/461CS/TeleReaderProj/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/TeleReaderProj.dir/TelemKalmanVoltage.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TeleReaderProj.dir/TelemKalmanVoltage.cpp.o -c /home/lunng/Documents/Homework/461CS/TeleReaderProj/TelemKalmanVoltage.cpp
+CMakeFiles/TeleReaderProj.dir/TelemStringTypes/TelemKalmanVoltage.cpp.o: CMakeFiles/TeleReaderProj.dir/flags.make
+CMakeFiles/TeleReaderProj.dir/TelemStringTypes/TelemKalmanVoltage.cpp.o: ../TelemStringTypes/TelemKalmanVoltage.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lunng/Documents/Homework/461CS/TeleReaderProj/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/TeleReaderProj.dir/TelemStringTypes/TelemKalmanVoltage.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TeleReaderProj.dir/TelemStringTypes/TelemKalmanVoltage.cpp.o -c /home/lunng/Documents/Homework/461CS/TeleReaderProj/TelemStringTypes/TelemKalmanVoltage.cpp
 
-CMakeFiles/TeleReaderProj.dir/TelemKalmanVoltage.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TeleReaderProj.dir/TelemKalmanVoltage.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lunng/Documents/Homework/461CS/TeleReaderProj/TelemKalmanVoltage.cpp > CMakeFiles/TeleReaderProj.dir/TelemKalmanVoltage.cpp.i
+CMakeFiles/TeleReaderProj.dir/TelemStringTypes/TelemKalmanVoltage.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TeleReaderProj.dir/TelemStringTypes/TelemKalmanVoltage.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lunng/Documents/Homework/461CS/TeleReaderProj/TelemStringTypes/TelemKalmanVoltage.cpp > CMakeFiles/TeleReaderProj.dir/TelemStringTypes/TelemKalmanVoltage.cpp.i
 
-CMakeFiles/TeleReaderProj.dir/TelemKalmanVoltage.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TeleReaderProj.dir/TelemKalmanVoltage.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lunng/Documents/Homework/461CS/TeleReaderProj/TelemKalmanVoltage.cpp -o CMakeFiles/TeleReaderProj.dir/TelemKalmanVoltage.cpp.s
+CMakeFiles/TeleReaderProj.dir/TelemStringTypes/TelemKalmanVoltage.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TeleReaderProj.dir/TelemStringTypes/TelemKalmanVoltage.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lunng/Documents/Homework/461CS/TeleReaderProj/TelemStringTypes/TelemKalmanVoltage.cpp -o CMakeFiles/TeleReaderProj.dir/TelemStringTypes/TelemKalmanVoltage.cpp.s
+
+CMakeFiles/TeleReaderProj.dir/TelemStringTypes/TelemGPS.cpp.o: CMakeFiles/TeleReaderProj.dir/flags.make
+CMakeFiles/TeleReaderProj.dir/TelemStringTypes/TelemGPS.cpp.o: ../TelemStringTypes/TelemGPS.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lunng/Documents/Homework/461CS/TeleReaderProj/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/TeleReaderProj.dir/TelemStringTypes/TelemGPS.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TeleReaderProj.dir/TelemStringTypes/TelemGPS.cpp.o -c /home/lunng/Documents/Homework/461CS/TeleReaderProj/TelemStringTypes/TelemGPS.cpp
+
+CMakeFiles/TeleReaderProj.dir/TelemStringTypes/TelemGPS.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TeleReaderProj.dir/TelemStringTypes/TelemGPS.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lunng/Documents/Homework/461CS/TeleReaderProj/TelemStringTypes/TelemGPS.cpp > CMakeFiles/TeleReaderProj.dir/TelemStringTypes/TelemGPS.cpp.i
+
+CMakeFiles/TeleReaderProj.dir/TelemStringTypes/TelemGPS.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TeleReaderProj.dir/TelemStringTypes/TelemGPS.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lunng/Documents/Homework/461CS/TeleReaderProj/TelemStringTypes/TelemGPS.cpp -o CMakeFiles/TeleReaderProj.dir/TelemStringTypes/TelemGPS.cpp.s
 
 # Object files for target TeleReaderProj
 TeleReaderProj_OBJECTS = \
 "CMakeFiles/TeleReaderProj.dir/main.cpp.o" \
 "CMakeFiles/TeleReaderProj.dir/TelemParser.cpp.o" \
 "CMakeFiles/TeleReaderProj.dir/TelemString.cpp.o" \
-"CMakeFiles/TeleReaderProj.dir/TelemSensorData.cpp.o" \
-"CMakeFiles/TeleReaderProj.dir/TelemKalmanVoltage.cpp.o"
+"CMakeFiles/TeleReaderProj.dir/TelemStringTypes/TelemSensorData.cpp.o" \
+"CMakeFiles/TeleReaderProj.dir/TelemStringTypes/TelemKalmanVoltage.cpp.o" \
+"CMakeFiles/TeleReaderProj.dir/TelemStringTypes/TelemGPS.cpp.o"
 
 # External object files for target TeleReaderProj
 TeleReaderProj_EXTERNAL_OBJECTS =
@@ -136,11 +150,12 @@ TeleReaderProj_EXTERNAL_OBJECTS =
 TeleReaderProj: CMakeFiles/TeleReaderProj.dir/main.cpp.o
 TeleReaderProj: CMakeFiles/TeleReaderProj.dir/TelemParser.cpp.o
 TeleReaderProj: CMakeFiles/TeleReaderProj.dir/TelemString.cpp.o
-TeleReaderProj: CMakeFiles/TeleReaderProj.dir/TelemSensorData.cpp.o
-TeleReaderProj: CMakeFiles/TeleReaderProj.dir/TelemKalmanVoltage.cpp.o
+TeleReaderProj: CMakeFiles/TeleReaderProj.dir/TelemStringTypes/TelemSensorData.cpp.o
+TeleReaderProj: CMakeFiles/TeleReaderProj.dir/TelemStringTypes/TelemKalmanVoltage.cpp.o
+TeleReaderProj: CMakeFiles/TeleReaderProj.dir/TelemStringTypes/TelemGPS.cpp.o
 TeleReaderProj: CMakeFiles/TeleReaderProj.dir/build.make
 TeleReaderProj: CMakeFiles/TeleReaderProj.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lunng/Documents/Homework/461CS/TeleReaderProj/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable TeleReaderProj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lunng/Documents/Homework/461CS/TeleReaderProj/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable TeleReaderProj"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/TeleReaderProj.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

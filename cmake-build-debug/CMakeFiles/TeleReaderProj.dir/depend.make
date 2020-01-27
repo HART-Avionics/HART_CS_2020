@@ -4,14 +4,25 @@
 CMakeFiles/TeleReaderProj.dir/TelemParser.cpp.o: ../TelemParser.cpp
 CMakeFiles/TeleReaderProj.dir/TelemParser.cpp.o: ../TelemParser.h
 
-CMakeFiles/TeleReaderProj.dir/TelemSensorData.cpp.o: ../TelemSensorData.cpp
-CMakeFiles/TeleReaderProj.dir/TelemSensorData.cpp.o: ../TelemSensorData.h
-CMakeFiles/TeleReaderProj.dir/TelemSensorData.cpp.o: ../TelemString.h
-
 CMakeFiles/TeleReaderProj.dir/TelemString.cpp.o: ../TelemString.cpp
 CMakeFiles/TeleReaderProj.dir/TelemString.cpp.o: ../TelemString.h
 
-CMakeFiles/TeleReaderProj.dir/main.cpp.o: ../TelemSensorData.h
+CMakeFiles/TeleReaderProj.dir/TelemStringTypes/TelemGPS.cpp.o: ../TelemString.h
+CMakeFiles/TeleReaderProj.dir/TelemStringTypes/TelemGPS.cpp.o: ../TelemStringTypes/TelemGPS.cpp
+CMakeFiles/TeleReaderProj.dir/TelemStringTypes/TelemGPS.cpp.o: ../TelemStringTypes/TelemGPS.h
+
+CMakeFiles/TeleReaderProj.dir/TelemStringTypes/TelemKalmanVoltage.cpp.o: ../TelemString.h
+CMakeFiles/TeleReaderProj.dir/TelemStringTypes/TelemKalmanVoltage.cpp.o: ../TelemStringTypes/TelemKalmanVoltage.cpp
+CMakeFiles/TeleReaderProj.dir/TelemStringTypes/TelemKalmanVoltage.cpp.o: ../TelemStringTypes/TelemKalmanVoltage.h
+
+CMakeFiles/TeleReaderProj.dir/TelemStringTypes/TelemSensorData.cpp.o: ../TelemString.h
+CMakeFiles/TeleReaderProj.dir/TelemStringTypes/TelemSensorData.cpp.o: ../TelemStringTypes/TelemSensorData.cpp
+CMakeFiles/TeleReaderProj.dir/TelemStringTypes/TelemSensorData.cpp.o: ../TelemStringTypes/TelemSensorData.h
+
+CMakeFiles/TeleReaderProj.dir/main.cpp.o: ../TelemParser.h
 CMakeFiles/TeleReaderProj.dir/main.cpp.o: ../TelemString.h
+CMakeFiles/TeleReaderProj.dir/main.cpp.o: ../TelemStringTypes/TelemGPS.h
+CMakeFiles/TeleReaderProj.dir/main.cpp.o: ../TelemStringTypes/TelemKalmanVoltage.h
+CMakeFiles/TeleReaderProj.dir/main.cpp.o: ../TelemStringTypes/TelemSensorData.h
 CMakeFiles/TeleReaderProj.dir/main.cpp.o: ../main.cpp
 

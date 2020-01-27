@@ -123,33 +123,6 @@ TeleReaderProj/fast:
 	$(MAKE) -f CMakeFiles/TeleReaderProj.dir/build.make CMakeFiles/TeleReaderProj.dir/build
 .PHONY : TeleReaderProj/fast
 
-TelemKalmanVoltage.o: TelemKalmanVoltage.cpp.o
-
-.PHONY : TelemKalmanVoltage.o
-
-# target to build an object file
-TelemKalmanVoltage.cpp.o:
-	$(MAKE) -f CMakeFiles/TeleReaderProj.dir/build.make CMakeFiles/TeleReaderProj.dir/TelemKalmanVoltage.cpp.o
-.PHONY : TelemKalmanVoltage.cpp.o
-
-TelemKalmanVoltage.i: TelemKalmanVoltage.cpp.i
-
-.PHONY : TelemKalmanVoltage.i
-
-# target to preprocess a source file
-TelemKalmanVoltage.cpp.i:
-	$(MAKE) -f CMakeFiles/TeleReaderProj.dir/build.make CMakeFiles/TeleReaderProj.dir/TelemKalmanVoltage.cpp.i
-.PHONY : TelemKalmanVoltage.cpp.i
-
-TelemKalmanVoltage.s: TelemKalmanVoltage.cpp.s
-
-.PHONY : TelemKalmanVoltage.s
-
-# target to generate assembly for a file
-TelemKalmanVoltage.cpp.s:
-	$(MAKE) -f CMakeFiles/TeleReaderProj.dir/build.make CMakeFiles/TeleReaderProj.dir/TelemKalmanVoltage.cpp.s
-.PHONY : TelemKalmanVoltage.cpp.s
-
 TelemParser.o: TelemParser.cpp.o
 
 .PHONY : TelemParser.o
@@ -177,33 +150,6 @@ TelemParser.cpp.s:
 	$(MAKE) -f CMakeFiles/TeleReaderProj.dir/build.make CMakeFiles/TeleReaderProj.dir/TelemParser.cpp.s
 .PHONY : TelemParser.cpp.s
 
-TelemSensorData.o: TelemSensorData.cpp.o
-
-.PHONY : TelemSensorData.o
-
-# target to build an object file
-TelemSensorData.cpp.o:
-	$(MAKE) -f CMakeFiles/TeleReaderProj.dir/build.make CMakeFiles/TeleReaderProj.dir/TelemSensorData.cpp.o
-.PHONY : TelemSensorData.cpp.o
-
-TelemSensorData.i: TelemSensorData.cpp.i
-
-.PHONY : TelemSensorData.i
-
-# target to preprocess a source file
-TelemSensorData.cpp.i:
-	$(MAKE) -f CMakeFiles/TeleReaderProj.dir/build.make CMakeFiles/TeleReaderProj.dir/TelemSensorData.cpp.i
-.PHONY : TelemSensorData.cpp.i
-
-TelemSensorData.s: TelemSensorData.cpp.s
-
-.PHONY : TelemSensorData.s
-
-# target to generate assembly for a file
-TelemSensorData.cpp.s:
-	$(MAKE) -f CMakeFiles/TeleReaderProj.dir/build.make CMakeFiles/TeleReaderProj.dir/TelemSensorData.cpp.s
-.PHONY : TelemSensorData.cpp.s
-
 TelemString.o: TelemString.cpp.o
 
 .PHONY : TelemString.o
@@ -230,6 +176,87 @@ TelemString.s: TelemString.cpp.s
 TelemString.cpp.s:
 	$(MAKE) -f CMakeFiles/TeleReaderProj.dir/build.make CMakeFiles/TeleReaderProj.dir/TelemString.cpp.s
 .PHONY : TelemString.cpp.s
+
+TelemStringTypes/TelemGPS.o: TelemStringTypes/TelemGPS.cpp.o
+
+.PHONY : TelemStringTypes/TelemGPS.o
+
+# target to build an object file
+TelemStringTypes/TelemGPS.cpp.o:
+	$(MAKE) -f CMakeFiles/TeleReaderProj.dir/build.make CMakeFiles/TeleReaderProj.dir/TelemStringTypes/TelemGPS.cpp.o
+.PHONY : TelemStringTypes/TelemGPS.cpp.o
+
+TelemStringTypes/TelemGPS.i: TelemStringTypes/TelemGPS.cpp.i
+
+.PHONY : TelemStringTypes/TelemGPS.i
+
+# target to preprocess a source file
+TelemStringTypes/TelemGPS.cpp.i:
+	$(MAKE) -f CMakeFiles/TeleReaderProj.dir/build.make CMakeFiles/TeleReaderProj.dir/TelemStringTypes/TelemGPS.cpp.i
+.PHONY : TelemStringTypes/TelemGPS.cpp.i
+
+TelemStringTypes/TelemGPS.s: TelemStringTypes/TelemGPS.cpp.s
+
+.PHONY : TelemStringTypes/TelemGPS.s
+
+# target to generate assembly for a file
+TelemStringTypes/TelemGPS.cpp.s:
+	$(MAKE) -f CMakeFiles/TeleReaderProj.dir/build.make CMakeFiles/TeleReaderProj.dir/TelemStringTypes/TelemGPS.cpp.s
+.PHONY : TelemStringTypes/TelemGPS.cpp.s
+
+TelemStringTypes/TelemKalmanVoltage.o: TelemStringTypes/TelemKalmanVoltage.cpp.o
+
+.PHONY : TelemStringTypes/TelemKalmanVoltage.o
+
+# target to build an object file
+TelemStringTypes/TelemKalmanVoltage.cpp.o:
+	$(MAKE) -f CMakeFiles/TeleReaderProj.dir/build.make CMakeFiles/TeleReaderProj.dir/TelemStringTypes/TelemKalmanVoltage.cpp.o
+.PHONY : TelemStringTypes/TelemKalmanVoltage.cpp.o
+
+TelemStringTypes/TelemKalmanVoltage.i: TelemStringTypes/TelemKalmanVoltage.cpp.i
+
+.PHONY : TelemStringTypes/TelemKalmanVoltage.i
+
+# target to preprocess a source file
+TelemStringTypes/TelemKalmanVoltage.cpp.i:
+	$(MAKE) -f CMakeFiles/TeleReaderProj.dir/build.make CMakeFiles/TeleReaderProj.dir/TelemStringTypes/TelemKalmanVoltage.cpp.i
+.PHONY : TelemStringTypes/TelemKalmanVoltage.cpp.i
+
+TelemStringTypes/TelemKalmanVoltage.s: TelemStringTypes/TelemKalmanVoltage.cpp.s
+
+.PHONY : TelemStringTypes/TelemKalmanVoltage.s
+
+# target to generate assembly for a file
+TelemStringTypes/TelemKalmanVoltage.cpp.s:
+	$(MAKE) -f CMakeFiles/TeleReaderProj.dir/build.make CMakeFiles/TeleReaderProj.dir/TelemStringTypes/TelemKalmanVoltage.cpp.s
+.PHONY : TelemStringTypes/TelemKalmanVoltage.cpp.s
+
+TelemStringTypes/TelemSensorData.o: TelemStringTypes/TelemSensorData.cpp.o
+
+.PHONY : TelemStringTypes/TelemSensorData.o
+
+# target to build an object file
+TelemStringTypes/TelemSensorData.cpp.o:
+	$(MAKE) -f CMakeFiles/TeleReaderProj.dir/build.make CMakeFiles/TeleReaderProj.dir/TelemStringTypes/TelemSensorData.cpp.o
+.PHONY : TelemStringTypes/TelemSensorData.cpp.o
+
+TelemStringTypes/TelemSensorData.i: TelemStringTypes/TelemSensorData.cpp.i
+
+.PHONY : TelemStringTypes/TelemSensorData.i
+
+# target to preprocess a source file
+TelemStringTypes/TelemSensorData.cpp.i:
+	$(MAKE) -f CMakeFiles/TeleReaderProj.dir/build.make CMakeFiles/TeleReaderProj.dir/TelemStringTypes/TelemSensorData.cpp.i
+.PHONY : TelemStringTypes/TelemSensorData.cpp.i
+
+TelemStringTypes/TelemSensorData.s: TelemStringTypes/TelemSensorData.cpp.s
+
+.PHONY : TelemStringTypes/TelemSensorData.s
+
+# target to generate assembly for a file
+TelemStringTypes/TelemSensorData.cpp.s:
+	$(MAKE) -f CMakeFiles/TeleReaderProj.dir/build.make CMakeFiles/TeleReaderProj.dir/TelemStringTypes/TelemSensorData.cpp.s
+.PHONY : TelemStringTypes/TelemSensorData.cpp.s
 
 main.o: main.cpp.o
 
@@ -267,18 +294,21 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... TeleReaderProj"
 	@echo "... edit_cache"
-	@echo "... TelemKalmanVoltage.o"
-	@echo "... TelemKalmanVoltage.i"
-	@echo "... TelemKalmanVoltage.s"
 	@echo "... TelemParser.o"
 	@echo "... TelemParser.i"
 	@echo "... TelemParser.s"
-	@echo "... TelemSensorData.o"
-	@echo "... TelemSensorData.i"
-	@echo "... TelemSensorData.s"
 	@echo "... TelemString.o"
 	@echo "... TelemString.i"
 	@echo "... TelemString.s"
+	@echo "... TelemStringTypes/TelemGPS.o"
+	@echo "... TelemStringTypes/TelemGPS.i"
+	@echo "... TelemStringTypes/TelemGPS.s"
+	@echo "... TelemStringTypes/TelemKalmanVoltage.o"
+	@echo "... TelemStringTypes/TelemKalmanVoltage.i"
+	@echo "... TelemStringTypes/TelemKalmanVoltage.s"
+	@echo "... TelemStringTypes/TelemSensorData.o"
+	@echo "... TelemStringTypes/TelemSensorData.i"
+	@echo "... TelemStringTypes/TelemSensorData.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

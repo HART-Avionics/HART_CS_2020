@@ -51,6 +51,12 @@ uint16_t TelemString::get_uint16_val(int byte_index) {
     return value;
 }
 
+int8_t TelemString::get_int8_val(int byte_index) {
+    std::string data = get_ordered_bytes(byte_index, byte_index);
+    int8_t value = std::stoi(data, nullptr, 16);
+    return value;
+}
+
 int16_t TelemString::get_int16_val(int byte_index) {
     std::string data = get_ordered_bytes(byte_index, byte_index + 1);
     int16_t value = std::stoi(data, nullptr, 16);
@@ -59,7 +65,7 @@ int16_t TelemString::get_int16_val(int byte_index) {
 
 int32_t TelemString::get_int32_val(int byte_index) {
     std::string data = get_ordered_bytes(byte_index, byte_index + 3);
-    int32_t value = std::stoi(data, nullptr, 16);
+    int32_t value = std::stol(data, nullptr, 16);
     return value;
 }
 
@@ -81,3 +87,4 @@ unsigned int TelemString::get_tick() {
 unsigned int TelemString::get_serial() {
     return this->serial;
 }
+

@@ -22,6 +22,7 @@ public:
     uint8_t get_uint8_val(int);
     uint16_t get_uint16_val(int);
 
+    int8_t get_int8_val(int);
     int16_t get_int16_val(int);
     int32_t get_int32_val(int);
 

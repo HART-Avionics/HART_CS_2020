@@ -7,8 +7,9 @@
 
 
 #include <stdint-gcc.h>
+#include "../TelemString.h"
 
-class TelemKalmanVoltage {
+class TelemKalmanVoltage : public TelemString {
 private:
     uint8_t state;
     int16_t v_batt;
@@ -23,6 +24,7 @@ private:
     int16_t height;
 
 public:
+    explicit TelemKalmanVoltage(std::string);
     uint8_t get_state();
     int16_t get_v_batt();
     int16_t get_v_pyro();

@@ -74,12 +74,12 @@ preinstall:
 CMakeFiles/TeleReaderProj.dir/all:
 	$(MAKE) -f CMakeFiles/TeleReaderProj.dir/build.make CMakeFiles/TeleReaderProj.dir/depend
 	$(MAKE) -f CMakeFiles/TeleReaderProj.dir/build.make CMakeFiles/TeleReaderProj.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lunng/Documents/Homework/461CS/TeleReaderProj/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target TeleReaderProj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lunng/Documents/Homework/461CS/TeleReaderProj/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target TeleReaderProj"
 .PHONY : CMakeFiles/TeleReaderProj.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/TeleReaderProj.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lunng/Documents/Homework/461CS/TeleReaderProj/cmake-build-debug/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lunng/Documents/Homework/461CS/TeleReaderProj/cmake-build-debug/CMakeFiles 7
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/TeleReaderProj.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/lunng/Documents/Homework/461CS/TeleReaderProj/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/TeleReaderProj.dir/rule
