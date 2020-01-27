@@ -19,9 +19,9 @@ bool TelemParser::telem_string_valid(std::string test_string) {
     test_string.erase(0, s.length());
 
     std::string lqi = test_string.substr(test_string.length()-4, 2);
-    std::cout << "lqi: "<< std::hex << lqi << std::endl;
 
     if(!((unsigned short) 0b00000001 & (unsigned short) stoul(lqi, nullptr, 16))){
+        std::cerr << "The lqi " << lqi << " is not valid." << std::endl;
         return false;
     }
 
@@ -41,7 +41,6 @@ TelemParser::TelemParser(std::string filename) : file_reader() {
     this->TKV = nullptr;
     this->TSD = nullptr;
     this->running = false;
-    this->data_valid = false;
     initialize();
 }
 
@@ -55,52 +54,80 @@ void TelemParser::do_work() {
     std::string lastLastLine;
 
 
-    int lines_read = 0;
     while(this->running){
+        this->iostream_mutex.lock(); // lock the mutex for file handling
+
         fin.open(this->input_file);
 
-        // loop is adapted from a script written for stackoverflow
-        // https://stackoverflow.com/questions/11876290/c-fastest-way-to-read-only-last-line-of-text-file
-
-
         if(fin.is_open()) {
-            fin.seekg(-1,std::ios_base::end);           // go to one spot before the EOF
+            fin.seekg(0,std::ios_base::end);           // go to the EOF
 
-            bool counted = false;
-            int loops = 0;
-            while(true) {
-                char ch;
-                fin.get(ch);                        // Get current byte's data
+            // Verify new data has been added
+            if(fin.tellg() != this->reader_location) {
 
-                if((int)fin.tellg() <= 1) {             // If the data was at or before the 0th byte
-                    fin.seekg(0);                       // The first line is the last line
-                    break;                              // So stop there
+                // Go to the start of new data
+                fin.seekg(this->reader_location);
 
+                // Fill in the updated data members
+                while(!fin.eof()){
+                    std::string data_line;
+                    getline(fin, data_line);    // Read the next unread line
+
+                    if(telem_string_valid(data_line)){
+                        fill_data(data_line);
+                    }
+                    if(fin.tellg() != -1){
+                        this->reader_location = fin.tellg();
+                    }
                 }
-                else if(ch == '\n') {                   // If the data was a newline
-                    if(counted) break;
-                    fin.seekg(-2,std::ios_base::cur);   // Move to the front of that data, then to the front of the data before it
-                    counted = true;                     // Get the next to last line.
-                }
-                else {                                  // If the data was neither a newline nor at the 0 byte
-                    fin.seekg(-2,std::ios_base::cur);   // Move to the front of that data, then to the front of the data before it
-                }
+
+                fin.close();
             }
-
-            std::string lastLine;
-            getline(fin,lastLine);               // Read the current line
-            if(lastLastLine != lastLine && !lastLine.empty()){
-                std::cout << "Result: " << lastLine << '\n';     // Display it
-                lastLastLine = lastLine;
-                lines_read++;
-            }
-
-            fin.close();
         }
+        this->iostream_mutex.unlock();
+    }
+}
+
+void TelemParser::fill_data(const std::string& line_in) {
+    int mode = TelemString::get_mode(line_in);
+
+    // Update the stored data
+    switch(mode) {
+        case MODE_GPS:
+            if (this->TGPS == nullptr) {
+                this->TGPS = new TelemGPS(line_in);
+            } else {
+                this->TGPS->update_string(line_in);
+                this->TGPS->update_values();
+            }
+            break;
+
+        case MODE_KV:
+            if (this->TKV == nullptr) {
+                this->TKV = new TelemKalmanVoltage(line_in);
+            } else {
+                this->TKV->update_string(line_in);
+                this->TKV->update_values();
+            }
+            break;
+
+        case MODE_SD:
+            if (this->TSD == nullptr){
+                this->TSD = new TelemSensorData(line_in);
+            } else {
+                this->TSD->update_string(line_in);
+                this->TSD->update_values();
+            }
+            break;
+
+        default:
+            std::cerr << line_in << " has unsupported mode: " << mode << std::endl;
     }
 }
 
 void TelemParser::initialize() {
+    this->iostream_mutex.lock(); // lock the mutex within the scope of this function
+
     std::ifstream fin;
     std::string line_in;
 
@@ -109,44 +136,28 @@ void TelemParser::initialize() {
         getline(fin,line_in);               // Read the current line
 
         if(telem_string_valid(line_in)){
-            int mode = TelemString::get_mode(line_in);
-
-            // Update the stored data
-            switch(mode) {
-                case MODE_GPS:
-                    if (this->TGPS == nullptr) {
-                        this->TGPS = new TelemGPS(line_in);
-                    } else {
-                        this->TGPS->update_string(line_in);
-                        this->TGPS->update_values();
-                    }
-                    break;
-
-                case MODE_KV:
-                    if (this->TKV == nullptr) {
-                        this->TKV = new TelemKalmanVoltage(line_in);
-                    } else {
-                        this->TKV->update_string(line_in);
-                        this->TKV->update_values();
-                    }
-                    break;
-
-                case MODE_SD:
-                    if (this->TSD == nullptr){
-                        this->TSD = new TelemSensorData(line_in);
-                    } else {
-                        this->TSD->update_string(line_in);
-                        this->TSD->update_values();
-                    }
-                    break;
-
-                default:
-                    std::cout << line_in << " has unsupported mode: " << mode << std::endl;
-            }
+            fill_data(line_in);
+        }
+        if(fin.tellg() != -1){
+            this->reader_location = fin.tellg();
         }
     }
 
-    this->reader_location = fin.tellg();
-    fin.close();
 
+    fin.close();
+    this->iostream_mutex.unlock();
+}
+
+void TelemParser::dump_data() {
+    this->iostream_mutex.lock();
+    if(this->TGPS != nullptr){
+        this->TGPS->dump_string_data();
+    }
+    if(this->TKV != nullptr){
+        this->TKV->dump_string_data();
+    }
+    if(this->TSD != nullptr){
+        this->TSD->dump_string_data();
+    }
+    this->iostream_mutex.unlock();
 }

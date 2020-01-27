@@ -3,6 +3,7 @@
 //
 
 #include <cassert>
+#include <iostream>
 #include "TelemKalmanVoltage.h"
 
 
@@ -60,4 +61,19 @@ void TelemKalmanVoltage::update_values() {
     for(int idx = 0; idx < 6; idx++){
         this->sense[idx] = get_int8_val(11+idx);
     }
+}
+
+void TelemKalmanVoltage::dump_string_data() {
+    std::cout << "\n====== Kalman + Voltage Data ======" << std::endl;
+    std::cout <<
+              "\t" << "state: " << (unsigned) get_state() << std::endl <<
+              "\t" << "v_batt: " << get_v_batt() << std::endl <<
+              "\t" << "v_pyro: " << get_v_pyro() << std::endl <<
+              "\t" << "ground_pres: " << get_ground_pres() << std::endl <<
+              "\t" << "ground_accel: " << get_ground_accel() << std::endl <<
+              "\t" << "accel_plus_g: " << get_accel_plus_g() << std::endl <<
+              "\t" << "accel_minus_g: " << get_accel_minus_g() << std::endl <<
+              "\t" << "acceleration: " << get_acceleration() << std::endl <<
+              "\t" << "speed: " << get_speed() << std::endl <<
+              "\t" << "height: " << get_height() << std::endl;
 }

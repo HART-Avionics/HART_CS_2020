@@ -6,6 +6,7 @@
 
 #include <utility>
 #include <cassert>
+#include <iostream>
 
 TelemSensorData::TelemSensorData(std::string input_val) : TelemString(std::move(input_val)){
     update_values();
@@ -66,4 +67,22 @@ void TelemSensorData::update_values() {
     this->mag_x = get_int16_val(27);
     this->mag_y = get_int16_val(29);
     this->mag_z = get_int16_val(31);
+}
+
+void TelemSensorData::dump_string_data() {
+    std::cout << "\n====== Sensor Data ======" << std::endl;
+    std::cout <<
+              "\t" << "orient: " << (unsigned) get_orient() << std::endl <<
+              "\t" << "accel: " << get_accel() << std::endl <<
+              "\t" << "pres: " << get_pres() << std::endl <<
+              "\t" << "temp: " << get_temp() << std::endl <<
+              "\t" << "accel_x: " << get_accel_x() << std::endl <<
+              "\t" << "accel_y: " << get_accel_y() << std::endl <<
+              "\t" << "accel_z: " << get_accel_z() << std::endl <<
+              "\t" << "gyro_x: " << get_gyro_x() << std::endl <<
+              "\t" << "gyro_y: " << get_gyro_y() << std::endl <<
+              "\t" << "gyro_z: " << get_gyro_z() << std::endl <<
+              "\t" << "mag_x: " << get_mag_x() << std::endl <<
+              "\t" << "mag_y: " << get_mag_y() << std::endl <<
+              "\t" << "mag_z: " << get_mag_z() << std::endl;
 }

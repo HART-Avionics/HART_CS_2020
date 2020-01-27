@@ -80,5 +80,12 @@ int main() {
 //         "test GPS latitude:" << test_gps.get_latitude() << "\n" <<
 //         "test GPS ground speed:" << test_gps.get_ground_speed() << "\n" <<
 //         "test GPS course: " << (unsigned int) test_gps.get_course() << "\n";
+    string filename = "/home/lunng/TeleMetrum/2020-01-13-serial-3083-flight-0024-via-2881.telem";
+    TelemParser parser(filename);
+    parser.Start();
+    parser.dump_data();
+
+
+
     return 0;
 }

@@ -34,6 +34,7 @@ public:
     TelemGPS() = delete;
 
     void update_values() override;
+    void dump_string_data() override;
 
     uint8_t get_flags();
     int16_t get_altitude();

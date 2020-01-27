@@ -3,6 +3,7 @@
 //
 
 #include <cassert>
+#include <iostream>
 #include "TelemGPS.h"
 
 TelemGPS::TelemGPS(std::string input_val) : TelemString(std::move(input_val)){
@@ -97,4 +98,27 @@ void TelemGPS::update_values() {
     this->ground_speed = get_uint16_val(27);
     this->climb_rate = get_int16_val(29);
     this->course = get_uint8_val(31);
+}
+
+void TelemGPS::dump_string_data() {
+    std::cout << "\n====== GPS Data ======" << std::endl;
+    std::cout <<
+              "\t" << "flags: " << (unsigned) get_flags() << std::endl <<
+              "\t" << "altitude: " << get_altitude() << std::endl <<
+              "\t" << "latitude: " << get_latitude() << std::endl <<
+              "\t" << "longitude: " << get_longitude() << std::endl <<
+              "\t" << "year: " << (unsigned) get_year() << std::endl <<
+              "\t" << "month: " << (unsigned) get_month() << std::endl <<
+              "\t" << "day: " << (unsigned) get_day() << std::endl <<
+              "\t" << "hour: " << (unsigned) get_hour() << std::endl <<
+              "\t" << "minute: " << (unsigned) get_minute() << std::endl <<
+              "\t" << "second: " << (unsigned) get_second() << std::endl <<
+              "\t" << "pdop: " << (unsigned) get_pdop() << std::endl <<
+              "\t" << "hdop: " << (unsigned) get_hdop() << std::endl <<
+              "\t" << "vdop: " << (unsigned) get_vdop() << std::endl <<
+              "\t" << "mode: " << (unsigned) get_gps_mode() << std::endl <<
+              "\t" << "ground_speed: " << (unsigned) get_ground_speed() << std::endl <<
+              "\t" << "climb_rate: " << get_climb_rate() << std::endl <<
+              "\t" << "course: " << (unsigned) get_course() << std::endl;
+
 }

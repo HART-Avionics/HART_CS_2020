@@ -29,6 +29,7 @@ private:
 public:
     explicit TelemSensorData(std::string);
     void update_values() override;
+    void dump_string_data() override;
 
     uint8_t get_orient();
     int16_t get_accel();

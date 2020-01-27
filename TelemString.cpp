@@ -4,6 +4,7 @@
 
 #include <string>
 #include <cassert>
+#include <iostream>
 #include <utility>
 #include "TelemString.h"
 
@@ -93,3 +94,10 @@ void TelemString::update_string(std::string new_data) {
     this->mode = get_uint8_val(MODE_OFFSET);
 }
 
+void TelemString::dump_string_info() {
+    std::cout << "\nTELEM " << _telem_data << std::endl;
+    std::cout <<
+              "\t" << "Serial: " << get_serial() << std::endl <<
+              "\t" << "Tick: " << get_tick() << std::endl <<
+              "\t" << "Mode: " << get_mode() << std::endl;
+}

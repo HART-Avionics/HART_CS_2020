@@ -7,6 +7,7 @@
 
 #include <string>
 
+
 class TelemString {
 private:
     std::string _telem_data;
@@ -33,6 +34,9 @@ public:
 
     void update_string(std::string);
     virtual void update_values() = 0;
+
+    void dump_string_info();
+    virtual void dump_string_data() = 0;
 
     unsigned int get_tick();
     unsigned int get_serial();
