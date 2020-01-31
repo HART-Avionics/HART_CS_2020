@@ -134,19 +134,24 @@ void TelemParser::initialize() {
     std::string line_in;
 
     fin.open(this->input_file);
-    while(!fin.eof()){
-        getline(fin,line_in);               // Read the current line
+    if(fin.is_open()){
+        while(!fin.eof()){
+            getline(fin,line_in);               // Read the current line
 
-        if(telem_string_valid(line_in)){
-            fill_data(line_in);
+            if(telem_string_valid(line_in)){
+                fill_data(line_in);
+            }
+            if(fin.tellg() != -1){
+                this->reader_location = fin.tellg();
+            }
         }
-        if(fin.tellg() != -1){
-            this->reader_location = fin.tellg();
-        }
+
+
+        fin.close();
     }
-
-
-    fin.close();
+    else{
+        std::cout << "Failed to open " << this->input_file << std::endl;
+    }
     this->iostream_mutex.unlock();
 }
 
