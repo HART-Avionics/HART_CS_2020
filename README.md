@@ -8,4 +8,5 @@ Backend is designed as a module that can be imported to a project and work out o
 2. After the repository is cloned, open the [AltosUI](https://altusmetrum.org/AltOS/) on your local machine.
 3. Connect and set up the Teledongle to your computer, power on the telemega altimeter, and configure the altimeter within AltosUI.
 4. Within configuration, set up logging for the telemetrum.
-5. Copy the path to the logging file into the project filename inside.
+5. Initialize the parser with a string path to the logging file, this can be either an absolute or relative path.
+6. 
