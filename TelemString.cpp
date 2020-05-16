@@ -61,7 +61,11 @@ int16_t TelemString::get_int16_val(int byte_index) {
 
 int32_t TelemString::get_int32_val(int byte_index) {
     std::string data = get_ordered_bytes(byte_index, byte_index + 3);
-    int32_t value = std::stol(data, nullptr, 16);
+    std::cout << data.c_str() << std::endl;
+    int32_t value = 0;
+
+    value = std::stoll(data, nullptr, 16);
+
     return value;
 }
 

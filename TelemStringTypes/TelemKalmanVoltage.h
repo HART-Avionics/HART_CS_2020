@@ -7,7 +7,7 @@
 
 #define MODE_KV 0x09
 
-#include <stdint-gcc.h>
+#include <cstdint>
 #include "../TelemString.h"
 
 class TelemKalmanVoltage : public TelemString {
