@@ -1,3 +1,0 @@
-/home/lunng/Documents/Homework/461CS/TeleReaderProj/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/lunng/Documents/Homework/461CS/TeleReaderProj/cmake-build-debug/CMakeFiles/TeleReaderProj.dir
-/home/lunng/Documents/Homework/461CS/TeleReaderProj/cmake-build-debug/CMakeFiles/edit_cache.dir
