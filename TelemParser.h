@@ -51,6 +51,10 @@ public:
     void dump_data();
     static bool telem_string_valid(std::string);
 
+    // Getters Section, add the data types that you need, copy function template for get_acceleration()
+    int16_t get_acceleration();
+
+
 };
 
 

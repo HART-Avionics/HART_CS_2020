@@ -169,3 +169,9 @@ void TelemParser::dump_data() {
     }
     this->iostream_mutex.unlock();
 }
+
+int16_t TelemParser::get_acceleration(){
+    if(this->TKV != nullptr){
+        return this->TKV->get_acceleration();
+    }
+}
