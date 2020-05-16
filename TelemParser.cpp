@@ -1,6 +1,12 @@
-//
-// Created by lunng on 1/21/20.
-//
+/**
+ * file: TelemParser.cpp
+ *
+ * project: HART_CS_2020
+ *
+ * author: Grayland Lunn
+ * Contact: lunng@oregonstate.edu
+ *
+ */
 
 #include <string>
 #include <iostream>

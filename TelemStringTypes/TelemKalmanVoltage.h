@@ -1,6 +1,15 @@
-//
-// Created by lunng on 1/26/20.
-//
+/**
+ * file: TelemKalmanVoltage.h
+ *
+ * description: telemstring class for Kalman filter and Voltage data, copy this boilerplate for extension of
+ *              telemstring to implement other datatypes
+ *
+ * project: HART_CS_2020
+ *
+ * author: Grayland Lunn
+ * Contact: lunng@oregonstate.edu
+ *
+ */
 
 #ifndef TELEREADERPROJ_TELEMKALMANVOLTAGE_H
 #define TELEREADERPROJ_TELEMKALMANVOLTAGE_H

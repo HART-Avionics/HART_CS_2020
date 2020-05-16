@@ -1,6 +1,15 @@
-//
-// Created by lunng on 1/21/20.
-//
+/**
+ * file: TelemParser.h
+ *
+ * description: parser class for creating a parser thread that will read test from an altus metrum telemetry file and
+ *              provide data to the user defined program. Designed as a package that can be imported to your project
+ *
+ * project: HART_CS_2020
+ *
+ * author: Grayland Lunn
+ * Contact: lunng@oregonstate.edu
+ *
+ */
 
 #ifndef TELEREADERPROJ_TELEMPARSER_H
 #define TELEREADERPROJ_TELEMPARSER_H

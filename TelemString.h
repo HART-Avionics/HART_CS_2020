@@ -1,6 +1,15 @@
-//
-// Created by lunng on 1/21/20.
-//
+/**
+ * file: TelemString.h
+ *
+ * description: string datatype parent class for the telemetry data, create children of this class to
+ *              implement the datatypes that are provided by your specific Altus Metrum device
+ *
+ * project: HART_CS_2020
+ *
+ * author: Grayland Lunn
+ * Contact: lunng@oregonstate.edu
+ *
+ */
 
 #ifndef TELEREADERPROJ_TELEMSTRING_H
 #define TELEREADERPROJ_TELEMSTRING_H

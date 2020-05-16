@@ -1,6 +1,15 @@
-//
-// Created by lunng on 1/22/20.
-//
+/**
+ * file: TelemSensorData.cpp
+ *
+ * description: telemstring class for raw sensor data, copy this boilerplate for extension of
+ *              telemstring to implement other datatypes
+ *
+ * project: HART_CS_2020
+ *
+ * author: Grayland Lunn
+ * Contact: lunng@oregonstate.edu
+ *
+ */
 
 #include "TelemSensorData.h"
 
