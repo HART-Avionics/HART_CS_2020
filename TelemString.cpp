@@ -19,17 +19,19 @@
 #define MODE_OFFSET 5
 
 
-
+// Get the bytes for a specific range of bytes in the string
 std::string TelemString::get_bytes(int first_byte, int last_byte){
     // Note: each byte is 2 characters, 0 indexed get bytes [first,last]
     assert(this->_telem_data.length() > last_byte * 2 + 1);
     return(this->_telem_data.substr(first_byte * 2, (last_byte - first_byte + 1) * 2 ));
 }
 
+// Initialize a new string
 TelemString::TelemString(std::string line_in) {
     update_string(std::move(line_in));
 }
 
+// Reorder the bytes from little-endian to big endian for stol and stoul
 std::string TelemString::get_ordered_bytes(int first, int last) {
     std::string bytes = get_bytes(first, last);
     std::string ordered_bytes;
@@ -75,6 +77,7 @@ int32_t TelemString::get_int32_val(int byte_index) {
     return value;
 }
 
+// get the mode byte
 int TelemString::get_mode(std::string line_in) {
     line_in.erase(0, 6);
     std::string val = line_in.substr(MODE_OFFSET * 2, 2 );
@@ -94,6 +97,7 @@ unsigned int TelemString::get_serial() {
     return this->serial;
 }
 
+// set new data values for the new telem string
 void TelemString::update_string(std::string new_data) {
     std::string s("TELEM ");
     assert(new_data.rfind(s, 0) == 0);
@@ -104,6 +108,7 @@ void TelemString::update_string(std::string new_data) {
     this->mode = get_uint8_val(MODE_OFFSET);
 }
 
+// print all of the data for this string
 void TelemString::dump_string_info() {
     std::cout << "\nTELEM " << _telem_data << std::endl;
     std::cout <<

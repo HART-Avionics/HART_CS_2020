@@ -51,7 +51,7 @@ public:
     // File handlers
     void fill_data(const std::string&);
     void initialize();
-    void do_work();
+    void read_new_data();
 
     // Thread init
     void Start();

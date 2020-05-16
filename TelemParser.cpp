@@ -39,7 +39,7 @@ bool TelemParser::telem_string_valid(std::string test_string) {
 
 void TelemParser::Start() {
     this->running = true;
-    this->file_reader = std::thread(&TelemParser::do_work, this);
+    this->file_reader = std::thread(&TelemParser::read_new_data, this);
 }
 
 TelemParser::TelemParser(std::string filename) : file_reader() {
@@ -56,7 +56,7 @@ TelemParser::~TelemParser(){
     if(this->file_reader.joinable()) this->file_reader.join();
 }
 
-void TelemParser::do_work() {
+void TelemParser::read_new_data() {
     std::ifstream fin;
     std::string lastLastLine;
 
@@ -134,7 +134,8 @@ void TelemParser::fill_data(const std::string& line_in) {
 }
 
 void TelemParser::initialize() {
-    this->iostream_mutex.lock(); // lock the mutex within the scope of this function
+    // lock the mutex within the scope of this function
+    this->iostream_mutex.lock();
 
     std::ifstream fin;
     std::string line_in;
@@ -142,7 +143,8 @@ void TelemParser::initialize() {
     fin.open(this->input_file);
     if(fin.is_open()){
         while(!fin.eof()){
-            getline(fin,line_in);               // Read the current line
+            // Read the current line
+            getline(fin,line_in);
 
             if(telem_string_valid(line_in)){
                 fill_data(line_in);
@@ -162,6 +164,7 @@ void TelemParser::initialize() {
 }
 
 void TelemParser::dump_data() {
+    // print all data that the parser contains
     this->iostream_mutex.lock();
 
     if(this->TGPS != nullptr){
@@ -176,6 +179,7 @@ void TelemParser::dump_data() {
     this->iostream_mutex.unlock();
 }
 
+// copy this getter format to implement data getters outside of parser
 int16_t TelemParser::get_acceleration(){
     if(this->TKV != nullptr){
         return this->TKV->get_acceleration();
